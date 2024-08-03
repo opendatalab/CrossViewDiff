@@ -53,7 +53,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-2 publication-title"><b>CrossViewDiff:</b>
-              A Cross-View Diffusion Model for Satellite-to-Ground Image Synthesis</h1>
+              A Cross-View Diffusion Model for Satellite-to-Street View Synthesis</h1>
             <div class="is-size-5 publication-authors">
               <!-- Paper authors -->
               <span class="author-block">
@@ -140,21 +140,12 @@
         <h2 class="title is-3">Abstract</h2>
         <div class="content has-text-justified">
           <p>
-            Satellite-to-ground image synthesis aims at generating a realistic street-view
-            image from its corresponding satellite-view image. Despite the considerable efforts
-            towards improving the geometry structure of the synthetic street-view images,
-            the texture fidelity have barely been explored and guaranteed in existing studies. Although stable diffusion models have exhibit remarkable performance in a
-            variety of image generation applications, the reliance on textual or similar-view
-            inputs to control the generated textures or styles restricts their application to
-            the challenging cross-view synthesis task. In this work, we propose CrossViewDiff, the first stable diffusion based method for satellite-to-ground cross-view
-            image synthesis. To address the challenges posed by the large discrepancy across
-            views, we construct structural and textural controls from satellite imagery via
-            our proposed cross-view depth transformation and coordinate mapping modules. We further design a cross-view guided denoising process to incorporate
-            the structural and textural controls via a geospatial adaptive satellite-to-ground
-            cross-attention module. Experimental results on two public cross-view benchmark
-            datasets demonstrate that our CrossViewDiff generates high-quality street-view
-            panoramas with more realistic structure and texture than current state-of-the-art
-            for both rural and urban scenes.
+            Satellite-to-street view synthesis aims at generating a realistic street-view image from its corresponding satellite-view image. Although stable diffusion models have exhibit remarkable performance in a variety of image generation applications, their reliance on similar-view inputs to control the generated structure or texture restricts their application to the challenging cross-view synthesis task. 
+In this work, we propose CrossViewDiff, a cross-view diffusion model for satellite-to-street view synthesis. To address the challenges posed by the large discrepancy across views, we design the satellite scene structure estimation and cross-view texture mapping modules to construct the structural and textural controls for street-view image synthesis.
+We further design a cross-view control guided denoising process that incorporates the above controls via an enhanced cross-view attention module.
+To achieve a more comprehensive evaluation of the synthesis results, we additionally design a GPT-based scoring method as a supplement to standard evaluation metrics.
+We also explore the effect of different data sources (e.g., text, maps, building heights, and multi-temporal satellite imagery) on this task.
+Results on three public cross-view datasets show that CrossViewDiff outperforms current state-of-the-art on both standard and GPT-based evaluation metrics, generating high-quality street-view panoramas with more realistic structures and textures across rural, suburban, and urban scenes.
           </p>
         </div>
       </div>
